@@ -1,0 +1,43 @@
+{
+  "name": "range-input-base",
+  "version": "0.0.0",
+  "description": "TopCoat range input base",
+  "main": "range-input-base.css",
+  "topcoat": {
+    "controls": {
+      "topcoat/utils": ""
+    }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:topcoat/range-input-base.git"
+  },
+  "keywords": [
+    "css",
+    "topcoat",
+    "range",
+    "input",
+    "base",
+    "adobe"
+  ],
+  "author": "@an_rei Andrei Oprea",
+  "license": "Apache",
+  "devDependencies": {
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-nodeunit": "*",
+    "grunt": "*",
+    "grunt-contrib-stylus": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-zip": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-topcoat": "*",
+    "grunt-contrib-jade": "*",
+    "debug": "*"
+  }
+}

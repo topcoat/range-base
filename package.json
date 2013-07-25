@@ -1,46 +1,42 @@
 {
-  "name": "range-input-base",
-  "version": "0.0.0",
-  "description": "Topcoat range input base",
-  "main": "range-input-base.css",
-  "topcoat": {
-    "controls": {
-      "topcoat/utils": ""
-    }
-  },
+  "name": "topcoat-range-input-base",
+  "version": "0.4.1",
+  "description": "Topcoat range-input base. Reset styles for buttons.",
+  "main": "index.html",
   "directories": {
-    "test": "test"
+    "test": "test",
+    "lib": "src",
+    "bin": "css"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "prepublish": "grunt"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:topcoat/range-input-base.git"
+    "url": "git://github.com/topcoat/range-input.git"
   },
   "keywords": [
-    "css",
-    "topcoat",
     "range",
     "input",
+    "css",
+    "topcoat",
     "base",
+    "reset",
     "adobe"
   ],
-  "author": "@ndreio Andrei Oprea",
+  "author": "@ndrei Andrei Oprea",
   "license": "Apache",
   "devDependencies": {
-    "grunt-contrib-watch": "*",
-    "grunt-contrib-nodeunit": "*",
-    "grunt": "*",
-    "grunt-contrib-stylus": "*",
-    "grunt-contrib-clean": "*",
-    "grunt-zip": "*",
-    "grunt-contrib-cssmin": "*",
-    "grunt-topcoat": "*",
-    "grunt-contrib-jade": "*",
-    "debug": "*"
+    "grunt-contrib-stylus": "~0.6.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-contrib-jade": "~0.7.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-simple-mocha": "~0.4.0"
   },
   "dependencies": {
-    "nodeunit": "~0.8.0"
+    "topcoat-utils": "~0.1.0"
   }
 }

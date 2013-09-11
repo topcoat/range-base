@@ -1,7 +1,7 @@
 {
-  "name": "topcoat-range-input-base",
+  "name": "topcoat-range-base",
   "version": "0.0.1",
-  "description": "Topcoat range-input base. Reset styles for buttons.",
+  "description": "Base component for range",
   "main": "index.html",
   "directories": {
     "test": "test",
@@ -22,21 +22,19 @@
     "css",
     "topcoat",
     "base",
-    "reset",
     "adobe"
   ],
-  "author": "@ndreio Andrei Oprea",
-  "license": "Apache",
+  "author": "@dam Kristofer Joseph",
+  "license": "Apache2",
   "devDependencies": {
-    "grunt-contrib-stylus": "~0.6.0",
     "grunt": "~0.4.1",
+    "grunt-contrib-stylus": "~0.6.0",
     "grunt-contrib-watch": "~0.4.4",
     "grunt-contrib-cssmin": "~0.6.1",
-    "grunt-contrib-jade": "~0.7.0",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-simple-mocha": "~0.4.0"
   },
   "dependencies": {
-    "topcoat-utils": "~0.1.0"
+    "topcoat-utils": "~0.1.3"
   }
 }

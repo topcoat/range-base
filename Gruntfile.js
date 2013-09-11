@@ -30,13 +30,12 @@ module.exports = function(grunt) {
         stylus: {
             compile: {
                 options: {
-                    paths: ['src', 'src/mixins', 'node_modules/topcoat-utils/src/mixins'],
-                    import: ['range-input-mixin', 'utils'],
+                    paths: ['node_modules/topcoat-utils/src/mixins'],
                     compress: false,
                 },
                 files: [{
-                    src: 'src/range-input.styl',
-                    dest: 'css/range-input.css'
+                    src: 'src/range.styl',
+                    dest: 'css/range.css'
                 }]
             }
         },
@@ -47,27 +46,11 @@ module.exports = function(grunt) {
                 cwd: 'css/',
                 src: ['*.css', '!*.min.css'],
                 dest: 'css/',
-                ext: '.min.css',
-                options: {
-                    banner: grunt.file.read('src/copyright.styl').toString()
-                }
+                ext: '.min.css'
             },
-        },
-
-        jade: {
-            compile: {
-                expand: true,
-                cwd: 'test/perf',
-                src: ['*.jade'],
-                dest: 'test/perf/',
-                ext: '.test.html'
-            }
         },
 
         simplemocha: {
-            options: {
-                ui: 'bdd'
-            },
             all: {
                 src: ['test/*.test.js']
             }
@@ -84,11 +67,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-simple-mocha');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
     grunt.registerTask('default', ['clean', 'build', 'test', 'release']);
-    grunt.registerTask('build', ['stylus', 'jade']);
+    grunt.registerTask('build', ['stylus']);
     grunt.registerTask('test', ['simplemocha']);
     grunt.registerTask('release', ['cssmin']);
 

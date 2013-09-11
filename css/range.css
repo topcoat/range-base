@@ -12,15 +12,13 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-@import range-input-mixin
-
-/*
-Topcoat range input base
--------------------------
-
-	<input type='range' class='range-input'>
-
-*/
-
-.range-input
-	range-input-base()
+.range {
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  opacity: 0.001;
+  z-index: 1;
+  vertical-align: top;
+  outline: none;
+}

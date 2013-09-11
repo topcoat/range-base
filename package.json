@@ -1,5 +1,5 @@
 {
-  "name": "topcoat-range-input-base",
+  "name": "topcoat-range-base",
   "version": "0.0.1",
   "description": "Base component for range",
   "main": "index.html",

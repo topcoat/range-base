@@ -14,20 +14,20 @@ limitations under the License.
 */
 @import "topcoat-utils";
 
-.range {
+%range {
   extend: %reset-input;
   -webkit-appearance: none;
 }
 
-.range__thumb {
+%range__thumb {
   cursor: pointer;
 }
 
-.range__thumb--webkit {
+%range__thumb--webkit {
   cursor: pointer;
   -webkit-appearance: none;
 }
 
-.range:disabled {
+%range:disabled {
   extend: %disabled;
 }

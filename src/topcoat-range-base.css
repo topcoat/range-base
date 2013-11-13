@@ -12,10 +12,10 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-@import utils
+@import "topcoat-utils";
 
 .range {
-  reset-input()
+  extend: %reset-input;
   -webkit-appearance: none;
 }
 
@@ -28,5 +28,6 @@ limitations under the License.
   -webkit-appearance: none;
 }
 
-.range:disabled
-  disabled()
+.range:disabled {
+  extend: %disabled;
+}

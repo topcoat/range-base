@@ -28,6 +28,11 @@
   -webkit-appearance: none;
 }
 
+%range__thumb--webkit {
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
 %range--disabled {
   extend: %disabled;
 }

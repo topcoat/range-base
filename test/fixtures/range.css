@@ -25,6 +25,10 @@
   extend: %range__thumb;
 }
 
+.range__thumb--webkit {
+  extend: %range__thumb--webkit;
+}
+
 .range:disabled {
   extend: %range--disabled;
 }

@@ -27,25 +27,25 @@ module.exports = function(grunt) {
             release: ['css']
         },
 
-        stylus: {
+        topcoat: {
+            options: {
+                browsers: ['last 2 versions']
+            },
             compile: {
-                options: {
-                    paths: ['node_modules/topcoat-utils/src/mixins'],
-                    compress: false,
-                },
                 files: [{
-                    src: 'src/range.styl',
-                    dest: 'css/range.css'
-                }]
+                        src: 'test/fixtures/range.css',
+                        dest: 'css/range.css'
+                    }
+                ]
             }
         },
 
         cssmin: {
             minify: {
                 expand: true,
-                cwd: 'css/',
+                cwd: 'css',
                 src: ['*.css', '!*.min.css'],
-                dest: 'css/',
+                dest: 'css',
                 ext: '.min.css'
             },
         },
@@ -54,23 +54,17 @@ module.exports = function(grunt) {
             all: {
                 src: ['test/*.test.js']
             }
-        },
-
-        watch: {
-            files: 'src/**/*.styl',
-            tasks: ['build', 'test']
         }
     });
 
     // These plugins provide necessary tasks.
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-stylus');
+    grunt.loadNpmTasks('grunt-topcoat');
     grunt.loadNpmTasks('grunt-simple-mocha');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
     grunt.registerTask('default', ['clean', 'build', 'test', 'release']);
-    grunt.registerTask('build', ['stylus']);
+    grunt.registerTask('build', ['topcoat']);
     grunt.registerTask('test', ['simplemocha']);
     grunt.registerTask('release', ['cssmin']);
 
